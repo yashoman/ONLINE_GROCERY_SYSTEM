@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B03DBF8C-A110-450B-BDB9-FE3B7495A751}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OGS_Library</RootNamespace>
+    <AssemblyName>OGS_Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DEF_CATEGORY.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEF_CUSTOMERS.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEF_LOCATION.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEF_OFFERS.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEF_OFFER_TYPE.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEF_PRODUCT.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEF_PROVINCE.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEF_SUPER_MARKET.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository\IOrder_Detail_Repository.cs" />
+    <Compile Include="IRepository\IOrder_Repository.cs" />
+    <Compile Include="IRepository\IGenericRepository.cs" />
+    <Compile Include="ITEM_LIST.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ITEM_LIST_LINE_ITEMS.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OGSContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OGSContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OGSContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OGSContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OGSContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_LINE_ITEMS.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="Repository\Order_Detail_Repository.cs" />
+    <Compile Include="Repository\Order_Repository.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>OGSContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="OGSContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OGSContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="OGSContext.edmx.diagram">
+      <DependentUpon>OGSContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OGSContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OGSContext.edmx</DependentUpon>
+      <LastGenOutput>OGSContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="OGSContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OGSContext.edmx</DependentUpon>
+      <LastGenOutput>OGSContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

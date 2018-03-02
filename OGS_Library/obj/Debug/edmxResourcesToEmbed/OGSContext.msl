@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="OGSEntities">
+    <EntitySetMapping Name="DEF_CATEGORY">
+      <EntityTypeMapping TypeName="Model.DEF_CATEGORY">
+        <MappingFragment StoreEntitySet="DEF_CATEGORY">
+          <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+          <ScalarProperty Name="CATEGORY_NAME" ColumnName="CATEGORY_NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEF_CUSTOMERS">
+      <EntityTypeMapping TypeName="Model.DEF_CUSTOMERS">
+        <MappingFragment StoreEntitySet="DEF_CUSTOMERS">
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="CONTACT_NO_1" ColumnName="CONTACT_NO_1" />
+          <ScalarProperty Name="CONTACT_NO_2" ColumnName="CONTACT_NO_2" />
+          <ScalarProperty Name="ADDRESS_NO" ColumnName="ADDRESS_NO" />
+          <ScalarProperty Name="ADDRESS_CITY" ColumnName="ADDRESS_CITY" />
+          <ScalarProperty Name="ADDRESS_LANE" ColumnName="ADDRESS_LANE" />
+          <ScalarProperty Name="PROVINCE_ID" ColumnName="PROVINCE_ID" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEF_LOCATION">
+      <EntityTypeMapping TypeName="Model.DEF_LOCATION">
+        <MappingFragment StoreEntitySet="DEF_LOCATION">
+          <ScalarProperty Name="LOCATION_ID" ColumnName="LOCATION_ID" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="NO" ColumnName="NO" />
+          <ScalarProperty Name="LANE" ColumnName="LANE" />
+          <ScalarProperty Name="PROVINCE_ID" ColumnName="PROVINCE_ID" />
+          <ScalarProperty Name="LAND_MARK" ColumnName="LAND_MARK" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEF_OFFER_TYPE">
+      <EntityTypeMapping TypeName="Model.DEF_OFFER_TYPE">
+        <MappingFragment StoreEntitySet="DEF_OFFER_TYPE">
+          <ScalarProperty Name="OFFER_TYPE_ID" ColumnName="OFFER_TYPE_ID" />
+          <ScalarProperty Name="OFFER_TYPE" ColumnName="OFFER_TYPE" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEF_OFFERS">
+      <EntityTypeMapping TypeName="Model.DEF_OFFERS">
+        <MappingFragment StoreEntitySet="DEF_OFFERS">
+          <ScalarProperty Name="OFFERS_ID" ColumnName="OFFERS_ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="OFFER_TYPE_ID" ColumnName="OFFER_TYPE_ID" />
+          <ScalarProperty Name="DISCOUNT___" ColumnName="DISCOUNT(%)" />
+          <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+          <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEF_PRODUCT">
+      <EntityTypeMapping TypeName="Model.DEF_PRODUCT">
+        <MappingFragment StoreEntitySet="DEF_PRODUCT">
+          <ScalarProperty Name="PRODUCT_ID" ColumnName="PRODUCT_ID" />
+          <ScalarProperty Name="PRODUCT_NAME" ColumnName="PRODUCT_NAME" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+          <ScalarProperty Name="EXPIRY_DATE" ColumnName="EXPIRY_DATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEF_PROVINCE">
+      <EntityTypeMapping TypeName="Model.DEF_PROVINCE">
+        <MappingFragment StoreEntitySet="DEF_PROVINCE">
+          <ScalarProperty Name="PROVINCE_ID" ColumnName="PROVINCE_ID" />
+          <ScalarProperty Name="PROVINCE_NAME" ColumnName="PROVINCE_NAME" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEF_SUPER_MARKET">
+      <EntityTypeMapping TypeName="Model.DEF_SUPER_MARKET">
+        <MappingFragment StoreEntitySet="DEF_SUPER_MARKET">
+          <ScalarProperty Name="SUPER_MARKET_ID" ColumnName="SUPER_MARKET_ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CONTACT_NO_1" ColumnName="CONTACT_NO_1" />
+          <ScalarProperty Name="CONTACT_NO_2" ColumnName="CONTACT_NO_2" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="LOCATION_ID" ColumnName="LOCATION_ID" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEM_LIST">
+      <EntityTypeMapping TypeName="Model.ITEM_LIST">
+        <MappingFragment StoreEntitySet="ITEM_LIST">
+          <ScalarProperty Name="ITEM_LIST_ID" ColumnName="ITEM_LIST_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="OFFERS_ID" ColumnName="OFFERS_ID" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+          <ScalarProperty Name="SUPER_MARKET_ID" ColumnName="SUPER_MARKET_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDERS">
+      <EntityTypeMapping TypeName="Model.ORDER">
+        <MappingFragment StoreEntitySet="ORDERS">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="SUPER_MARKET_ID" ColumnName="SUPER_MARKET_ID" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEM_LIST_LINE_ITEMS">
+      <EntityTypeMapping TypeName="Model.ITEM_LIST_LINE_ITEMS">
+        <MappingFragment StoreEntitySet="ITEM_LIST_LINE_ITEMS">
+          <ScalarProperty Name="ITEM_LIST_ID" ColumnName="ITEM_LIST_ID" />
+          <ScalarProperty Name="PRODUCT_ID" ColumnName="PRODUCT_ID" />
+          <ScalarProperty Name="OFFERS_ID" ColumnName="OFFERS_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="STOCK" ColumnName="STOCK" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATDE_USER" ColumnName="CREATDE_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_LINE_ITEMS">
+      <EntityTypeMapping TypeName="Model.ORDER_LINE_ITEMS">
+        <MappingFragment StoreEntitySet="ORDER_LINE_ITEMS">
+          <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
+          <ScalarProperty Name="PRODUCT_ID" ColumnName="PRODUCT_ID" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="TOTAL_AMOUNT" ColumnName="TOTAL_AMOUNT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="OFFERS_ID" ColumnName="OFFERS_ID" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="CREATED_USER" ColumnName="CREATED_USER" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="MODIFIED_USER" ColumnName="MODIFIED_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

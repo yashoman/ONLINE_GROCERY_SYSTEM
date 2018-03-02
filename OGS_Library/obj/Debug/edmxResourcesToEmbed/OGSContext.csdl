@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DEF_CATEGORY">
+    <Key>
+      <PropertyRef Name="CATEGORY_ID" />
+    </Key>
+    <Property Name="CATEGORY_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CATEGORY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DEF_PRODUCT" Relationship="Self.FK_DEF_PRODUCT_DEF_CATEGORY" FromRole="DEF_CATEGORY" ToRole="DEF_PRODUCT" />
+  </EntityType>
+  <EntityType Name="DEF_CUSTOMERS">
+    <Key>
+      <PropertyRef Name="CUSTOMER_ID" />
+    </Key>
+    <Property Name="CUSTOMER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CONTACT_NO_1" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CONTACT_NO_2" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ADDRESS_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_CITY" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_LANE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PROVINCE_ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DEF_LOCATION">
+    <Key>
+      <PropertyRef Name="LOCATION_ID" />
+    </Key>
+    <Property Name="LOCATION_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LANE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PROVINCE_ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LAND_MARK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DEF_SUPER_MARKET" Relationship="Self.FK_DEF_SUPER_MARKET_DEF_LOCATION" FromRole="DEF_LOCATION" ToRole="DEF_SUPER_MARKET" />
+  </EntityType>
+  <EntityType Name="DEF_OFFER_TYPE">
+    <Key>
+      <PropertyRef Name="OFFER_TYPE_ID" />
+    </Key>
+    <Property Name="OFFER_TYPE_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OFFER_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DEF_OFFERS" Relationship="Self.FK_DEF_OFFERS_DEF_OFFER_TYPE" FromRole="DEF_OFFER_TYPE" ToRole="DEF_OFFERS" />
+  </EntityType>
+  <EntityType Name="DEF_OFFERS">
+    <Key>
+      <PropertyRef Name="OFFERS_ID" />
+    </Key>
+    <Property Name="OFFERS_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OFFER_TYPE_ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DISCOUNT___" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="START_DATE" Type="DateTime" Precision="0" />
+    <Property Name="END_DATE" Type="DateTime" Precision="0" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="DEF_OFFER_TYPE" Relationship="Self.FK_DEF_OFFERS_DEF_OFFER_TYPE" FromRole="DEF_OFFERS" ToRole="DEF_OFFER_TYPE" />
+    <NavigationProperty Name="ITEM_LIST" Relationship="Self.FK_ITEM_LIST_DEF_OFFERS" FromRole="DEF_OFFERS" ToRole="ITEM_LIST" />
+    <NavigationProperty Name="ITEM_LIST_LINE_ITEMS" Relationship="Self.FK_ITEM_LIST_LINE_ITEMS_DEF_OFFERS" FromRole="DEF_OFFERS" ToRole="ITEM_LIST_LINE_ITEMS" />
+    <NavigationProperty Name="ORDER_LINE_ITEMS" Relationship="Self.FK_ORDER_LINE_ITEMS_DEF_OFFERS" FromRole="DEF_OFFERS" ToRole="ORDER_LINE_ITEMS" />
+  </EntityType>
+  <EntityType Name="DEF_PRODUCT">
+    <Key>
+      <PropertyRef Name="PRODUCT_ID" />
+    </Key>
+    <Property Name="PRODUCT_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PRODUCT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CATEGORY_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="EXPIRY_DATE" Type="DateTime" Precision="0" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DEF_CATEGORY" Relationship="Self.FK_DEF_PRODUCT_DEF_CATEGORY" FromRole="DEF_PRODUCT" ToRole="DEF_CATEGORY" />
+    <NavigationProperty Name="ITEM_LIST_LINE_ITEMS" Relationship="Self.FK_ITEM_LIST_LINE_ITEMS_DEF_PRODUCT" FromRole="DEF_PRODUCT" ToRole="ITEM_LIST_LINE_ITEMS" />
+    <NavigationProperty Name="ORDER_LINE_ITEMS" Relationship="Self.FK_ORDER_LINE_ITEMS_DEF_PRODUCT" FromRole="DEF_PRODUCT" ToRole="ORDER_LINE_ITEMS" />
+  </EntityType>
+  <EntityType Name="DEF_PROVINCE">
+    <Key>
+      <PropertyRef Name="PROVINCE_ID" />
+    </Key>
+    <Property Name="PROVINCE_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PROVINCE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="Binary" MaxLength="50" FixedLength="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DEF_SUPER_MARKET">
+    <Key>
+      <PropertyRef Name="SUPER_MARKET_ID" />
+    </Key>
+    <Property Name="SUPER_MARKET_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_NO_1" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CONTACT_NO_2" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="LOCATION_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DEF_LOCATION" Relationship="Self.FK_DEF_SUPER_MARKET_DEF_LOCATION" FromRole="DEF_SUPER_MARKET" ToRole="DEF_LOCATION" />
+    <NavigationProperty Name="ITEM_LIST" Relationship="Self.FK_ITEM_LIST_DEF_SUPER_MARKET" FromRole="DEF_SUPER_MARKET" ToRole="ITEM_LIST" />
+    <NavigationProperty Name="ORDERS" Relationship="Self.FK_ORDERS_DEF_SUPER_MARKET" FromRole="DEF_SUPER_MARKET" ToRole="ORDERS" />
+  </EntityType>
+  <EntityType Name="ITEM_LIST">
+    <Key>
+      <PropertyRef Name="ITEM_LIST_ID" />
+    </Key>
+    <Property Name="ITEM_LIST_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OFFERS_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPER_MARKET_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DEF_OFFERS" Relationship="Self.FK_ITEM_LIST_DEF_OFFERS" FromRole="ITEM_LIST" ToRole="DEF_OFFERS" />
+    <NavigationProperty Name="DEF_SUPER_MARKET" Relationship="Self.FK_ITEM_LIST_DEF_SUPER_MARKET" FromRole="ITEM_LIST" ToRole="DEF_SUPER_MARKET" />
+    <NavigationProperty Name="ITEM_LIST_LINE_ITEMS" Relationship="Self.FK_ITEM_LIST_LINE_ITEMS_ITEM_LIST" FromRole="ITEM_LIST" ToRole="ITEM_LIST_LINE_ITEMS" />
+  </EntityType>
+  <EntityType Name="ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SUPER_MARKET_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTOMER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DEF_SUPER_MARKET" Relationship="Self.FK_ORDERS_DEF_SUPER_MARKET" FromRole="ORDERS" ToRole="DEF_SUPER_MARKET" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ITEM_LIST_LINE_ITEMS">
+    <Key>
+      <PropertyRef Name="ITEM_LIST_ID" />
+      <PropertyRef Name="PRODUCT_ID" />
+      <PropertyRef Name="OFFERS_ID" />
+    </Key>
+    <Property Name="ITEM_LIST_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PRODUCT_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OFFERS_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="STOCK" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATDE_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DEF_OFFERS" Relationship="Self.FK_ITEM_LIST_LINE_ITEMS_DEF_OFFERS" FromRole="ITEM_LIST_LINE_ITEMS" ToRole="DEF_OFFERS" />
+    <NavigationProperty Name="DEF_PRODUCT" Relationship="Self.FK_ITEM_LIST_LINE_ITEMS_DEF_PRODUCT" FromRole="ITEM_LIST_LINE_ITEMS" ToRole="DEF_PRODUCT" />
+    <NavigationProperty Name="ITEM_LIST" Relationship="Self.FK_ITEM_LIST_LINE_ITEMS_ITEM_LIST" FromRole="ITEM_LIST_LINE_ITEMS" ToRole="ITEM_LIST" />
+  </EntityType>
+  <EntityType Name="ORDER_LINE_ITEMS">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+      <PropertyRef Name="PRODUCT_ID" />
+      <PropertyRef Name="OFFERS_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PRODUCT_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="QUANTITY" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OFFERS_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+    <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DEF_OFFERS" Relationship="Self.FK_ORDER_LINE_ITEMS_DEF_OFFERS" FromRole="ORDER_LINE_ITEMS" ToRole="DEF_OFFERS" />
+    <NavigationProperty Name="DEF_PRODUCT" Relationship="Self.FK_ORDER_LINE_ITEMS_DEF_PRODUCT" FromRole="ORDER_LINE_ITEMS" ToRole="DEF_PRODUCT" />
+  </EntityType>
+  <Association Name="FK_DEF_PRODUCT_DEF_CATEGORY">
+    <End Role="DEF_CATEGORY" Type="Self.DEF_CATEGORY" Multiplicity="1" />
+    <End Role="DEF_PRODUCT" Type="Self.DEF_PRODUCT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_CATEGORY">
+        <PropertyRef Name="CATEGORY_ID" />
+      </Principal>
+      <Dependent Role="DEF_PRODUCT">
+        <PropertyRef Name="CATEGORY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DEF_SUPER_MARKET_DEF_LOCATION">
+    <End Role="DEF_LOCATION" Type="Self.DEF_LOCATION" Multiplicity="1" />
+    <End Role="DEF_SUPER_MARKET" Type="Self.DEF_SUPER_MARKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_LOCATION">
+        <PropertyRef Name="LOCATION_ID" />
+      </Principal>
+      <Dependent Role="DEF_SUPER_MARKET">
+        <PropertyRef Name="LOCATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DEF_OFFERS_DEF_OFFER_TYPE">
+    <End Role="DEF_OFFER_TYPE" Type="Self.DEF_OFFER_TYPE" Multiplicity="0..1" />
+    <End Role="DEF_OFFERS" Type="Self.DEF_OFFERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_OFFER_TYPE">
+        <PropertyRef Name="OFFER_TYPE_ID" />
+      </Principal>
+      <Dependent Role="DEF_OFFERS">
+        <PropertyRef Name="OFFER_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_LIST_DEF_OFFERS">
+    <End Role="DEF_OFFERS" Type="Self.DEF_OFFERS" Multiplicity="1" />
+    <End Role="ITEM_LIST" Type="Self.ITEM_LIST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_OFFERS">
+        <PropertyRef Name="OFFERS_ID" />
+      </Principal>
+      <Dependent Role="ITEM_LIST">
+        <PropertyRef Name="OFFERS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_LIST_LINE_ITEMS_DEF_OFFERS">
+    <End Role="DEF_OFFERS" Type="Self.DEF_OFFERS" Multiplicity="1" />
+    <End Role="ITEM_LIST_LINE_ITEMS" Type="Self.ITEM_LIST_LINE_ITEMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_OFFERS">
+        <PropertyRef Name="OFFERS_ID" />
+      </Principal>
+      <Dependent Role="ITEM_LIST_LINE_ITEMS">
+        <PropertyRef Name="OFFERS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_LINE_ITEMS_DEF_OFFERS">
+    <End Role="DEF_OFFERS" Type="Self.DEF_OFFERS" Multiplicity="1" />
+    <End Role="ORDER_LINE_ITEMS" Type="Self.ORDER_LINE_ITEMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_OFFERS">
+        <PropertyRef Name="OFFERS_ID" />
+      </Principal>
+      <Dependent Role="ORDER_LINE_ITEMS">
+        <PropertyRef Name="OFFERS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_LIST_LINE_ITEMS_DEF_PRODUCT">
+    <End Role="DEF_PRODUCT" Type="Self.DEF_PRODUCT" Multiplicity="1" />
+    <End Role="ITEM_LIST_LINE_ITEMS" Type="Self.ITEM_LIST_LINE_ITEMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_PRODUCT">
+        <PropertyRef Name="PRODUCT_ID" />
+      </Principal>
+      <Dependent Role="ITEM_LIST_LINE_ITEMS">
+        <PropertyRef Name="PRODUCT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDER_LINE_ITEMS_DEF_PRODUCT">
+    <End Role="DEF_PRODUCT" Type="Self.DEF_PRODUCT" Multiplicity="1" />
+    <End Role="ORDER_LINE_ITEMS" Type="Self.ORDER_LINE_ITEMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_PRODUCT">
+        <PropertyRef Name="PRODUCT_ID" />
+      </Principal>
+      <Dependent Role="ORDER_LINE_ITEMS">
+        <PropertyRef Name="PRODUCT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_LIST_DEF_SUPER_MARKET">
+    <End Role="DEF_SUPER_MARKET" Type="Self.DEF_SUPER_MARKET" Multiplicity="1" />
+    <End Role="ITEM_LIST" Type="Self.ITEM_LIST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_SUPER_MARKET">
+        <PropertyRef Name="SUPER_MARKET_ID" />
+      </Principal>
+      <Dependent Role="ITEM_LIST">
+        <PropertyRef Name="SUPER_MARKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ORDERS_DEF_SUPER_MARKET">
+    <End Role="DEF_SUPER_MARKET" Type="Self.DEF_SUPER_MARKET" Multiplicity="0..1" />
+    <End Role="ORDERS" Type="Self.ORDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEF_SUPER_MARKET">
+        <PropertyRef Name="SUPER_MARKET_ID" />
+      </Principal>
+      <Dependent Role="ORDERS">
+        <PropertyRef Name="SUPER_MARKET_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ITEM_LIST_LINE_ITEMS_ITEM_LIST">
+    <End Role="ITEM_LIST" Type="Self.ITEM_LIST" Multiplicity="1" />
+    <End Role="ITEM_LIST_LINE_ITEMS" Type="Self.ITEM_LIST_LINE_ITEMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ITEM_LIST">
+        <PropertyRef Name="ITEM_LIST_ID" />
+      </Principal>
+      <Dependent Role="ITEM_LIST_LINE_ITEMS">
+        <PropertyRef Name="ITEM_LIST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OGSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DEF_CATEGORY" EntityType="Self.DEF_CATEGORY" />
+    <EntitySet Name="DEF_CUSTOMERS" EntityType="Self.DEF_CUSTOMERS" />
+    <EntitySet Name="DEF_LOCATION" EntityType="Self.DEF_LOCATION" />
+    <EntitySet Name="DEF_OFFER_TYPE" EntityType="Self.DEF_OFFER_TYPE" />
+    <EntitySet Name="DEF_OFFERS" EntityType="Self.DEF_OFFERS" />
+    <EntitySet Name="DEF_PRODUCT" EntityType="Self.DEF_PRODUCT" />
+    <EntitySet Name="DEF_PROVINCE" EntityType="Self.DEF_PROVINCE" />
+    <EntitySet Name="DEF_SUPER_MARKET" EntityType="Self.DEF_SUPER_MARKET" />
+    <EntitySet Name="ITEM_LIST" EntityType="Self.ITEM_LIST" />
+    <EntitySet Name="ORDERS" EntityType="Self.ORDER" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="ITEM_LIST_LINE_ITEMS" EntityType="Self.ITEM_LIST_LINE_ITEMS" />
+    <EntitySet Name="ORDER_LINE_ITEMS" EntityType="Self.ORDER_LINE_ITEMS" />
+    <AssociationSet Name="FK_DEF_PRODUCT_DEF_CATEGORY" Association="Self.FK_DEF_PRODUCT_DEF_CATEGORY">
+      <End Role="DEF_CATEGORY" EntitySet="DEF_CATEGORY" />
+      <End Role="DEF_PRODUCT" EntitySet="DEF_PRODUCT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DEF_SUPER_MARKET_DEF_LOCATION" Association="Self.FK_DEF_SUPER_MARKET_DEF_LOCATION">
+      <End Role="DEF_LOCATION" EntitySet="DEF_LOCATION" />
+      <End Role="DEF_SUPER_MARKET" EntitySet="DEF_SUPER_MARKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DEF_OFFERS_DEF_OFFER_TYPE" Association="Self.FK_DEF_OFFERS_DEF_OFFER_TYPE">
+      <End Role="DEF_OFFER_TYPE" EntitySet="DEF_OFFER_TYPE" />
+      <End Role="DEF_OFFERS" EntitySet="DEF_OFFERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_LIST_DEF_OFFERS" Association="Self.FK_ITEM_LIST_DEF_OFFERS">
+      <End Role="DEF_OFFERS" EntitySet="DEF_OFFERS" />
+      <End Role="ITEM_LIST" EntitySet="ITEM_LIST" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_LIST_LINE_ITEMS_DEF_OFFERS" Association="Self.FK_ITEM_LIST_LINE_ITEMS_DEF_OFFERS">
+      <End Role="DEF_OFFERS" EntitySet="DEF_OFFERS" />
+      <End Role="ITEM_LIST_LINE_ITEMS" EntitySet="ITEM_LIST_LINE_ITEMS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_LINE_ITEMS_DEF_OFFERS" Association="Self.FK_ORDER_LINE_ITEMS_DEF_OFFERS">
+      <End Role="DEF_OFFERS" EntitySet="DEF_OFFERS" />
+      <End Role="ORDER_LINE_ITEMS" EntitySet="ORDER_LINE_ITEMS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_LIST_LINE_ITEMS_DEF_PRODUCT" Association="Self.FK_ITEM_LIST_LINE_ITEMS_DEF_PRODUCT">
+      <End Role="DEF_PRODUCT" EntitySet="DEF_PRODUCT" />
+      <End Role="ITEM_LIST_LINE_ITEMS" EntitySet="ITEM_LIST_LINE_ITEMS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDER_LINE_ITEMS_DEF_PRODUCT" Association="Self.FK_ORDER_LINE_ITEMS_DEF_PRODUCT">
+      <End Role="DEF_PRODUCT" EntitySet="DEF_PRODUCT" />
+      <End Role="ORDER_LINE_ITEMS" EntitySet="ORDER_LINE_ITEMS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_LIST_DEF_SUPER_MARKET" Association="Self.FK_ITEM_LIST_DEF_SUPER_MARKET">
+      <End Role="DEF_SUPER_MARKET" EntitySet="DEF_SUPER_MARKET" />
+      <End Role="ITEM_LIST" EntitySet="ITEM_LIST" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ORDERS_DEF_SUPER_MARKET" Association="Self.FK_ORDERS_DEF_SUPER_MARKET">
+      <End Role="DEF_SUPER_MARKET" EntitySet="DEF_SUPER_MARKET" />
+      <End Role="ORDERS" EntitySet="ORDERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ITEM_LIST_LINE_ITEMS_ITEM_LIST" Association="Self.FK_ITEM_LIST_LINE_ITEMS_ITEM_LIST">
+      <End Role="ITEM_LIST" EntitySet="ITEM_LIST" />
+      <End Role="ITEM_LIST_LINE_ITEMS" EntitySet="ITEM_LIST_LINE_ITEMS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

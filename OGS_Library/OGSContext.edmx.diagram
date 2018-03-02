@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fe12e5b8c0cf4db89775a801b7927339" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.DEF_CATEGORY" Width="1.5" PointX="6" PointY="9.25" />
+        <EntityTypeShape EntityType="Model.DEF_CUSTOMERS" Width="1.5" PointX="10.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.DEF_LOCATION" Width="1.5" PointX="0.75" PointY="8.875" />
+        <EntityTypeShape EntityType="Model.DEF_OFFER_TYPE" Width="1.5" PointX="0.75" PointY="3.25" />
+        <EntityTypeShape EntityType="Model.DEF_OFFERS" Width="1.5" PointX="3" PointY="2.5" />
+        <EntityTypeShape EntityType="Model.DEF_PRODUCT" Width="1.5" PointX="8.25" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.DEF_PROVINCE" Width="1.5" PointX="10.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Model.DEF_SUPER_MARKET" Width="1.5" PointX="3" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.ITEM_LIST" Width="1.5" PointX="5.25" PointY="2.875" />
+        <EntityTypeShape EntityType="Model.ORDER" Width="1.5" PointX="5.25" PointY="13.125" />
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.ITEM_LIST_LINE_ITEMS" Width="1.5" PointX="10.5" PointY="2.75" />
+        <EntityTypeShape EntityType="Model.ORDER_LINE_ITEMS" Width="1.5" PointX="8.25" PointY="3.25" />
+        <AssociationConnector Association="Model.FK_DEF_PRODUCT_DEF_CATEGORY" />
+        <AssociationConnector Association="Model.FK_DEF_SUPER_MARKET_DEF_LOCATION" />
+        <AssociationConnector Association="Model.FK_DEF_OFFERS_DEF_OFFER_TYPE" />
+        <AssociationConnector Association="Model.FK_ITEM_LIST_DEF_OFFERS" />
+        <AssociationConnector Association="Model.FK_ITEM_LIST_LINE_ITEMS_DEF_OFFERS" />
+        <AssociationConnector Association="Model.FK_ORDER_LINE_ITEMS_DEF_OFFERS" />
+        <AssociationConnector Association="Model.FK_ITEM_LIST_LINE_ITEMS_DEF_PRODUCT" />
+        <AssociationConnector Association="Model.FK_ORDER_LINE_ITEMS_DEF_PRODUCT" />
+        <AssociationConnector Association="Model.FK_ITEM_LIST_DEF_SUPER_MARKET" />
+        <AssociationConnector Association="Model.FK_ORDERS_DEF_SUPER_MARKET" />
+        <AssociationConnector Association="Model.FK_ITEM_LIST_LINE_ITEMS_ITEM_LIST" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
