@@ -35,7 +35,6 @@ namespace OGS_Library
         public virtual DbSet<DEF_SUPER_MARKET> DEF_SUPER_MARKET { get; set; }
         public virtual DbSet<ITEM_LIST> ITEM_LIST { get; set; }
         public virtual DbSet<ORDER> ORDERS { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ITEM_LIST_LINE_ITEMS> ITEM_LIST_LINE_ITEMS { get; set; }
         public virtual DbSet<ORDER_LINE_ITEMS> ORDER_LINE_ITEMS { get; set; }
     }

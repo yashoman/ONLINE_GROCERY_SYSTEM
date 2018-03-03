@@ -15,7 +15,6 @@
         <EntityTypeShape EntityType="Model.DEF_SUPER_MARKET" Width="1.5" PointX="3" PointY="8.75" />
         <EntityTypeShape EntityType="Model.ITEM_LIST" Width="1.5" PointX="5.25" PointY="2.875" />
         <EntityTypeShape EntityType="Model.ORDER" Width="1.5" PointX="5.25" PointY="13.125" />
-        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="12.75" PointY="0.75" />
         <EntityTypeShape EntityType="Model.ITEM_LIST_LINE_ITEMS" Width="1.5" PointX="10.5" PointY="2.75" />
         <EntityTypeShape EntityType="Model.ORDER_LINE_ITEMS" Width="1.5" PointX="8.25" PointY="3.25" />
         <AssociationConnector Association="Model.FK_DEF_PRODUCT_DEF_CATEGORY" />

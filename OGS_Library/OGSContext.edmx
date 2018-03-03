@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DEF_CATEGORY">
           <Key>
             <PropertyRef Name="CATEGORY_ID" />
@@ -12,9 +12,9 @@
           <Property Name="CATEGORY_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
           <Property Name="CATEGORY_NAME" Type="varchar" MaxLength="50" />
           <Property Name="STATUS" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="DEF_CUSTOMERS">
@@ -41,9 +41,9 @@
           <Property Name="LANE" Type="varchar" MaxLength="50" />
           <Property Name="PROVINCE_ID" Type="numeric" Precision="18" Scale="0" />
           <Property Name="LAND_MARK" Type="varchar" MaxLength="50" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="20" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="DEF_OFFER_TYPE">
@@ -52,9 +52,9 @@
           </Key>
           <Property Name="OFFER_TYPE_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
           <Property Name="OFFER_TYPE" Type="varchar" MaxLength="50" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="DEF_OFFERS">
@@ -65,13 +65,13 @@
           <Property Name="DESCRIPTION" Type="varchar(max)" />
           <Property Name="OFFER_TYPE_ID" Type="numeric" Precision="18" Scale="0" />
           <Property Name="DISCOUNT(%)" Type="numeric" Precision="18" Scale="2" />
-          <Property Name="START_DATE" Type="date" />
-          <Property Name="END_DATE" Type="date" />
+          <Property Name="START_DATE" Type="datetime" />
+          <Property Name="END_DATE" Type="datetime" />
           <Property Name="STATUS" Type="numeric" Precision="18" Scale="0" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
         </EntityType>
         <EntityType Name="DEF_PRODUCT">
           <Key>
@@ -81,11 +81,11 @@
           <Property Name="PRODUCT_NAME" Type="varchar" MaxLength="50" />
           <Property Name="PRICE" Type="numeric" Precision="18" Scale="2" />
           <Property Name="CATEGORY_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="EXPIRY_DATE" Type="date" />
+          <Property Name="EXPIRY_DATE" Type="datetime" />
           <Property Name="STATUS" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="DEF_PROVINCE">
@@ -94,9 +94,9 @@
           </Key>
           <Property Name="PROVINCE_ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PROVINCE_NAME" Type="varchar" MaxLength="50" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="DEF_SUPER_MARKET">
@@ -109,9 +109,9 @@
           <Property Name="CONTACT_NO_2" Type="numeric" Precision="18" Scale="0" />
           <Property Name="STATUS" Type="numeric" Precision="18" Scale="0" />
           <Property Name="LOCATION_ID" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ITEM_LIST">
@@ -121,9 +121,9 @@
           <Property Name="ITEM_LIST_ID" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="STATUS" Type="numeric" Precision="18" Scale="0" />
           <Property Name="OFFERS_ID" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
           <Property Name="SUPER_MARKET_ID" Type="varchar" MaxLength="20" Nullable="false" />
         </EntityType>
@@ -140,9 +140,9 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ITEM_LIST_LINE_ITEMS
           <Property Name="OFFERS_ID" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="STATUS" Type="numeric" Precision="18" Scale="0" />
           <Property Name="STOCK" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATDE_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -168,20 +168,10 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="SUPER_MARKET_ID" Type="varchar" MaxLength="20" />
           <Property Name="CUSTOMER_ID" Type="varchar" MaxLength="20" />
           <Property Name="STATUS" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="CREATED_USER" Type="varchar" MaxLength="50" />
-          <Property Name="MODIFIED_DATE" Type="date" />
+          <Property Name="MODIFIED_DATE" Type="datetime" />
           <Property Name="MODIFIED_USER" Type="varchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_DEF_OFFERS_DEF_OFFER_TYPE">
           <End Role="DEF_OFFER_TYPE" Type="Self.DEF_OFFER_TYPE" Multiplicity="0..1" />
@@ -326,7 +316,6 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <EntitySet Name="DEF_SUPER_MARKET" EntityType="Self.DEF_SUPER_MARKET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ITEM_LIST" EntityType="Self.ITEM_LIST" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ORDERS" EntityType="Self.ORDERS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ITEM_LIST_LINE_ITEMS" EntityType="Self.ITEM_LIST_LINE_ITEMS" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [ITEM_LIST_LINE_ITEMS].[ITEM_LIST_ID] AS [ITEM_LIST_ID], 
@@ -410,7 +399,6 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <EntitySet Name="DEF_SUPER_MARKET" EntityType="Model.DEF_SUPER_MARKET" />
           <EntitySet Name="ITEM_LIST" EntityType="Model.ITEM_LIST" />
           <EntitySet Name="ORDERS" EntityType="Model.ORDER" />
-          <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagram" />
           <EntitySet Name="ITEM_LIST_LINE_ITEMS" EntityType="Model.ITEM_LIST_LINE_ITEMS" />
           <EntitySet Name="ORDER_LINE_ITEMS" EntityType="Model.ORDER_LINE_ITEMS" />
           <AssociationSet Name="FK_DEF_PRODUCT_DEF_CATEGORY" Association="Model.FK_DEF_PRODUCT_DEF_CATEGORY">
@@ -465,9 +453,9 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="CATEGORY_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="CATEGORY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DEF_PRODUCT" Relationship="Model.FK_DEF_PRODUCT_DEF_CATEGORY" FromRole="DEF_CATEGORY" ToRole="DEF_PRODUCT" />
         </EntityType>
@@ -495,9 +483,9 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="LANE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PROVINCE_ID" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="LAND_MARK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATED_USER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DEF_SUPER_MARKET" Relationship="Model.FK_DEF_SUPER_MARKET_DEF_LOCATION" FromRole="DEF_LOCATION" ToRole="DEF_SUPER_MARKET" />
         </EntityType>
@@ -507,9 +495,9 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           </Key>
           <Property Name="OFFER_TYPE_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="OFFER_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DEF_OFFERS" Relationship="Model.FK_DEF_OFFERS_DEF_OFFER_TYPE" FromRole="DEF_OFFER_TYPE" ToRole="DEF_OFFERS" />
         </EntityType>
@@ -521,13 +509,13 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="DESCRIPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="OFFER_TYPE_ID" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="DISCOUNT___" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="START_DATE" Type="DateTime" Precision="0" />
-          <Property Name="END_DATE" Type="DateTime" Precision="0" />
+          <Property Name="START_DATE" Type="DateTime" Precision="3" />
+          <Property Name="END_DATE" Type="DateTime" Precision="3" />
           <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <NavigationProperty Name="DEF_OFFER_TYPE" Relationship="Model.FK_DEF_OFFERS_DEF_OFFER_TYPE" FromRole="DEF_OFFERS" ToRole="DEF_OFFER_TYPE" />
           <NavigationProperty Name="ITEM_LIST" Relationship="Model.FK_ITEM_LIST_DEF_OFFERS" FromRole="DEF_OFFERS" ToRole="ITEM_LIST" />
           <NavigationProperty Name="ITEM_LIST_LINE_ITEMS" Relationship="Model.FK_ITEM_LIST_LINE_ITEMS_DEF_OFFERS" FromRole="DEF_OFFERS" ToRole="ITEM_LIST_LINE_ITEMS" />
@@ -541,11 +529,11 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="PRODUCT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PRICE" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="CATEGORY_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="EXPIRY_DATE" Type="DateTime" Precision="0" />
+          <Property Name="EXPIRY_DATE" Type="DateTime" Precision="3" />
           <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DEF_CATEGORY" Relationship="Model.FK_DEF_PRODUCT_DEF_CATEGORY" FromRole="DEF_PRODUCT" ToRole="DEF_CATEGORY" />
           <NavigationProperty Name="ITEM_LIST_LINE_ITEMS" Relationship="Model.FK_ITEM_LIST_LINE_ITEMS_DEF_PRODUCT" FromRole="DEF_PRODUCT" ToRole="ITEM_LIST_LINE_ITEMS" />
@@ -557,9 +545,9 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           </Key>
           <Property Name="PROVINCE_ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PROVINCE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="DEF_SUPER_MARKET">
@@ -572,9 +560,9 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="CONTACT_NO_2" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="LOCATION_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DEF_LOCATION" Relationship="Model.FK_DEF_SUPER_MARKET_DEF_LOCATION" FromRole="DEF_SUPER_MARKET" ToRole="DEF_LOCATION" />
           <NavigationProperty Name="ITEM_LIST" Relationship="Model.FK_ITEM_LIST_DEF_SUPER_MARKET" FromRole="DEF_SUPER_MARKET" ToRole="ITEM_LIST" />
@@ -587,9 +575,9 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="ITEM_LIST_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="OFFERS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SUPER_MARKET_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DEF_OFFERS" Relationship="Model.FK_ITEM_LIST_DEF_OFFERS" FromRole="ITEM_LIST" ToRole="DEF_OFFERS" />
@@ -604,21 +592,11 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="SUPER_MARKET_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="CUSTOMER_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DEF_SUPER_MARKET" Relationship="Model.FK_ORDERS_DEF_SUPER_MARKET" FromRole="ORDER" ToRole="DEF_SUPER_MARKET" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="ITEM_LIST_LINE_ITEMS">
           <Key>
@@ -631,9 +609,9 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
           <Property Name="OFFERS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="STOCK" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="CREATED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="CREATDE_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="0" />
+          <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
           <Property Name="MODIFIED_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DEF_OFFERS" Relationship="Model.FK_ITEM_LIST_LINE_ITEMS_DEF_OFFERS" FromRole="ITEM_LIST_LINE_ITEMS" ToRole="DEF_OFFERS" />
           <NavigationProperty Name="DEF_PRODUCT" Relationship="Model.FK_ITEM_LIST_LINE_ITEMS_DEF_PRODUCT" FromRole="ITEM_LIST_LINE_ITEMS" ToRole="DEF_PRODUCT" />
@@ -934,17 +912,6 @@ warning 6002: The table/view 'OnlineGrocerySystem_V.0.0.dbo.ORDER_LINE_ITEMS' do
                 <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
                 <ScalarProperty Name="SUPER_MARKET_ID" ColumnName="SUPER_MARKET_ID" />
                 <ScalarProperty Name="ORDER_ID" ColumnName="ORDER_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="Model.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

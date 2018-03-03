@@ -120,10 +120,151 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppResources\css\bootstrap.css" />
+    <Content Include="AppResources\css\creditly.css" />
+    <Content Include="AppResources\css\easy-responsive-tabs.css" />
+    <Content Include="AppResources\css\flexslider.css" />
+    <Content Include="AppResources\css\font-awesome.css" />
+    <Content Include="AppResources\css\style.css" />
+    <Content Include="AppResources\fonts\fontawesome-webfont.svg" />
+    <Content Include="AppResources\images\1.jpg" />
+    <Content Include="AppResources\images\1.png" />
+    <Content Include="AppResources\images\10.jpg" />
+    <Content Include="AppResources\images\10.png" />
+    <Content Include="AppResources\images\11.jpg" />
+    <Content Include="AppResources\images\11.png" />
+    <Content Include="AppResources\images\12.jpg" />
+    <Content Include="AppResources\images\12.png" />
+    <Content Include="AppResources\images\13.jpg" />
+    <Content Include="AppResources\images\13.png" />
+    <Content Include="AppResources\images\14.jpg" />
+    <Content Include="AppResources\images\14.png" />
+    <Content Include="AppResources\images\15.jpg" />
+    <Content Include="AppResources\images\15.png" />
+    <Content Include="AppResources\images\16.jpg" />
+    <Content Include="AppResources\images\16.png" />
+    <Content Include="AppResources\images\17.jpg" />
+    <Content Include="AppResources\images\17.png" />
+    <Content Include="AppResources\images\18.jpg" />
+    <Content Include="AppResources\images\18.png" />
+    <Content Include="AppResources\images\19.jpg" />
+    <Content Include="AppResources\images\19.png" />
+    <Content Include="AppResources\images\2.jpg" />
+    <Content Include="AppResources\images\2.png" />
+    <Content Include="AppResources\images\20.jpg" />
+    <Content Include="AppResources\images\20.png" />
+    <Content Include="AppResources\images\21.jpg" />
+    <Content Include="AppResources\images\21.png" />
+    <Content Include="AppResources\images\22.jpg" />
+    <Content Include="AppResources\images\22.png" />
+    <Content Include="AppResources\images\23.jpg" />
+    <Content Include="AppResources\images\23.png" />
+    <Content Include="AppResources\images\24.jpg" />
+    <Content Include="AppResources\images\24.png" />
+    <Content Include="AppResources\images\25.jpg" />
+    <Content Include="AppResources\images\25.png" />
+    <Content Include="AppResources\images\26.jpg" />
+    <Content Include="AppResources\images\26.png" />
+    <Content Include="AppResources\images\27.jpg" />
+    <Content Include="AppResources\images\27.png" />
+    <Content Include="AppResources\images\28.jpg" />
+    <Content Include="AppResources\images\28.png" />
+    <Content Include="AppResources\images\29.jpg" />
+    <Content Include="AppResources\images\29.png" />
+    <Content Include="AppResources\images\3.jpg" />
+    <Content Include="AppResources\images\3.png" />
+    <Content Include="AppResources\images\30.jpg" />
+    <Content Include="AppResources\images\30.png" />
+    <Content Include="AppResources\images\31.jpg" />
+    <Content Include="AppResources\images\31.png" />
+    <Content Include="AppResources\images\32.jpg" />
+    <Content Include="AppResources\images\32.png" />
+    <Content Include="AppResources\images\33.jpg" />
+    <Content Include="AppResources\images\33.png" />
+    <Content Include="AppResources\images\34.jpg" />
+    <Content Include="AppResources\images\34.png" />
+    <Content Include="AppResources\images\35.jpg" />
+    <Content Include="AppResources\images\35.png" />
+    <Content Include="AppResources\images\36.png" />
+    <Content Include="AppResources\images\37.png" />
+    <Content Include="AppResources\images\38.png" />
+    <Content Include="AppResources\images\39.png" />
+    <Content Include="AppResources\images\4.jpg" />
+    <Content Include="AppResources\images\4.png" />
+    <Content Include="AppResources\images\40.png" />
+    <Content Include="AppResources\images\41.png" />
+    <Content Include="AppResources\images\42.png" />
+    <Content Include="AppResources\images\43.png" />
+    <Content Include="AppResources\images\44.png" />
+    <Content Include="AppResources\images\45.png" />
+    <Content Include="AppResources\images\46.png" />
+    <Content Include="AppResources\images\47.png" />
+    <Content Include="AppResources\images\48.png" />
+    <Content Include="AppResources\images\49.png" />
+    <Content Include="AppResources\images\5.jpg" />
+    <Content Include="AppResources\images\5.png" />
+    <Content Include="AppResources\images\50.png" />
+    <Content Include="AppResources\images\51.png" />
+    <Content Include="AppResources\images\52.png" />
+    <Content Include="AppResources\images\53.png" />
+    <Content Include="AppResources\images\54.png" />
+    <Content Include="AppResources\images\55.png" />
+    <Content Include="AppResources\images\56.png" />
+    <Content Include="AppResources\images\57.png" />
+    <Content Include="AppResources\images\58.png" />
+    <Content Include="AppResources\images\59.png" />
+    <Content Include="AppResources\images\6.jpg" />
+    <Content Include="AppResources\images\6.png" />
+    <Content Include="AppResources\images\60.png" />
+    <Content Include="AppResources\images\61.png" />
+    <Content Include="AppResources\images\62.png" />
+    <Content Include="AppResources\images\63.png" />
+    <Content Include="AppResources\images\64.png" />
+    <Content Include="AppResources\images\65.png" />
+    <Content Include="AppResources\images\66.png" />
+    <Content Include="AppResources\images\67.png" />
+    <Content Include="AppResources\images\68.png" />
+    <Content Include="AppResources\images\69.png" />
+    <Content Include="AppResources\images\7.jpg" />
+    <Content Include="AppResources\images\7.png" />
+    <Content Include="AppResources\images\70.png" />
+    <Content Include="AppResources\images\71.png" />
+    <Content Include="AppResources\images\72.png" />
+    <Content Include="AppResources\images\73.png" />
+    <Content Include="AppResources\images\74.png" />
+    <Content Include="AppResources\images\75.png" />
+    <Content Include="AppResources\images\76.png" />
+    <Content Include="AppResources\images\8.jpg" />
+    <Content Include="AppResources\images\8.png" />
+    <Content Include="AppResources\images\9.jpg" />
+    <Content Include="AppResources\images\9.png" />
+    <Content Include="AppResources\images\arrow.png" />
+    <Content Include="AppResources\images\card.png" />
+    <Content Include="AppResources\images\cart.png" />
+    <Content Include="AppResources\images\close_1.png" />
+    <Content Include="AppResources\images\img-sp.png" />
+    <Content Include="AppResources\images\offer.png" />
+    <Content Include="AppResources\images\paypal.png" />
+    <Content Include="AppResources\images\star.png" />
+    <Content Include="AppResources\images\star1.png" />
+    <Content Include="AppResources\images\tag.png" />
+    <Content Include="AppResources\js\bootstrap.min.js" />
+    <Content Include="AppResources\js\counterup.min.js" />
+    <Content Include="AppResources\js\creditly.js" />
+    <Content Include="AppResources\js\easing.js" />
+    <Content Include="AppResources\js\easyResponsiveTabs.js" />
+    <Content Include="AppResources\js\jquery-1.11.1.min.js" />
+    <Content Include="AppResources\js\jquery.flexslider.js" />
+    <Content Include="AppResources\js\jquery.wmuSlider.js" />
+    <Content Include="AppResources\js\minicart.js" />
+    <Content Include="AppResources\js\move-top.js" />
+    <Content Include="AppResources\js\okzoom.js" />
+    <Content Include="AppResources\js\waypoints.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -139,11 +280,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="AppResources\fonts\fontawesome-webfont.eot" />
+    <Content Include="AppResources\fonts\fontawesome-webfont.ttf" />
+    <Content Include="AppResources\fonts\fontawesome-webfont.woff" />
+    <Content Include="AppResources\fonts\FontAwesome.otf" />
+    <Content Include="AppResources\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="AppResources\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -165,6 +313,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DashBoardController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,13 +322,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\DashBoard\Index.cshtml" />
+    <Content Include="Views\Shared\_Banner.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,7 +346,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

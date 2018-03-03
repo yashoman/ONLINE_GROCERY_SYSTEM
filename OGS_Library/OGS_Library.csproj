@@ -111,9 +111,6 @@
     <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="Repository\Order_Detail_Repository.cs" />
     <Compile Include="Repository\Order_Repository.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>OGSContext.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="OGSContext.edmx">
@@ -122,7 +119,9 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="OGSContext.edmx.diagram">
       <DependentUpon>OGSContext.edmx</DependentUpon>
     </None>

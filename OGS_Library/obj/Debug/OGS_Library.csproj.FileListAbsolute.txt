@@ -7,3 +7,13 @@ c:\users\admin\documents\visual studio 2015\Projects\OGS_Library\OGS_Library\bin
 c:\users\admin\documents\visual studio 2015\Projects\OGS_Library\OGS_Library\bin\Debug\EntityFramework.SqlServer.xml
 c:\users\admin\documents\visual studio 2015\Projects\OGS_Library\OGS_Library\obj\Debug\OGS_Library.dll
 c:\users\admin\documents\visual studio 2015\Projects\OGS_Library\OGS_Library\obj\Debug\OGS_Library.pdb
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\bin\Debug\OGS_Library.dll.config
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\bin\Debug\OGS_Library.dll
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\bin\Debug\OGS_Library.pdb
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\bin\Debug\EntityFramework.dll
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\bin\Debug\EntityFramework.xml
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\obj\Debug\OGS_Library.dll
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\obj\Debug\OGS_Library.pdb
+C:\Users\Yashoman Wickramasin\Desktop\Online Grocery\ONLINE_GROCERY_SYSTEM\OGS_Library\obj\Debug\OGS_Library.csprojResolveAssemblyReference.cache
